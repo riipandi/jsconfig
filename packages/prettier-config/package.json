@@ -1,11 +1,16 @@
 {
     "name": "@riipandi/prettier-config",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "Aris Ripandi's personal Prettier config",
     "license": "MIT",
     "author": {
         "name": "Aris Ripandi",
         "url": "https://github.com/riipandi"
+    },
+    "contributors": [],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/riipandi/jsconfig"
     },
     "main": "index.json",
     "files": [
@@ -13,5 +18,9 @@
     ],
     "publishConfig": {
         "access": "public"
-    }
+    },
+    "keywords": [
+        "prettier",
+        "prettier-config"
+    ]
 }
