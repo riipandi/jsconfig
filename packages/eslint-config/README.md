@@ -37,7 +37,7 @@ yarn add -D @riipandi/eslint-config
 
 ```json
 {
-    "extends": "@riipandi"
+  "extends": "@riipandi"
 }
 ```
 
@@ -45,10 +45,10 @@ yarn add -D @riipandi/eslint-config
 
 ```json
 {
-    "scripts": {
-        "lint": "eslint .",
-        "lint:fix": "eslint . --fix"
-    }
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  }
 }
 ```
 

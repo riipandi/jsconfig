@@ -1,24 +1,10 @@
-<br/>
-<div align="center">
-  <h1>Prettier Config</h1>
-  <h3 align="center">My personal prettier configuration</h3>
-  <a href="https://ripandis.com">Website</a>
-  <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-  <a href="https://jurnalog.com">Blog</a>
-  <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-  <a href="https://twitter.com/riipandi">Twitter</a>
-  <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-  <a href="https://www.linkedin.com/in/aris-ripandi">LinkedIn</a>
-  <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-  <a href="https://www.youtube.com/@riipandi">Youtube</a>
-</div>
-
----
+# @riipandi/prettier-config
 
 This repository contains nothing but a few essential configuration for Prettier formatter.
-Inspired from [@egoist/prettier-config](https://github.com/egoist/prettier-config).
 
-## Usage
+Inspired from [@egoist/prettier-config](https://github.com/egoist/prettier-config)
+
+## Install
 
 ```sh
 # Install with pnpm
@@ -29,6 +15,47 @@ npm install --save-dev @riipandi/prettier-config
 
 # Install with yarn
 yarn add -D @riipandi/prettier-config
+```
+
+## Usage
+
+In `package.json`:
+
+```json
+{
+  "prettier": "@riipandi/prettier-config"
+}
+```
+
+### EditorConfig
+
+This is optional, but if your editor using `.editorconfig` these settings are recomended:
+
+```ini
+# editorconfig.org
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+max_line_length = 100
+
+[*.{prettierrc,json,jsonc}]
+indent_size = 4
+max_line_length = off
+trim_trailing_whitespace = false
+
+[*.txt]
+insert_final_newline = false
+trim_trailing_whitespace = false
+max_line_length = off
+
+[{Makefile,**.mk}]
+indent_style = tab
 ```
 
 ## Thanks to...

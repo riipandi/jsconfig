@@ -2,27 +2,26 @@
     "name": "configjs",
     "version": "0.1.0",
     "private": true,
-    "workspaces": [
-        "packages/*"
-    ],
     "scripts": {
         "dev": "turbo run dev",
         "build": "turbo run build",
         "lint": "turbo run lint",
-        "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+        "format": "prettier --write \"**/*.{cjs,mjs,js,jsx,ts,tsx,md,mdx}\"",
+        "deps": "npx --yes npm-check-updates -x typescript --deep --interactive",
         "changeset": "changeset",
         "version-packages": "changeset version",
         "release": "turbo run build && changeset publish"
     },
     "devDependencies": {
-        "@changesets/cli": "^2.22.0",
-        "eslint": "^7.32.0",
-        "prettier": "^2.8.4",
-        "turbo": "latest"
+        "@changesets/cli": "^2.26.2",
+        "@riipandi/prettier-config": "workspace:^",
+        "eslint": "^8.45.0",
+        "prettier": "^3.0.0",
+        "turbo": "^1.10.7"
     },
+    "prettier": "@riipandi/prettier-config",
     "engines": {
-        "node": ">=14.0.0"
+        "node": "18.16.1"
     },
-    "dependencies": {},
-    "packageManager": "pnpm@7.27.0"
+    "packageManager": "pnpm@8.3.1"
 }
