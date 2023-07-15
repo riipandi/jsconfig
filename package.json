@@ -1,6 +1,6 @@
 {
     "name": "configjs",
-    "version": "0.1.0",
+    "version": "0.0.0",
     "private": true,
     "scripts": {
         "dev": "turbo run dev",
@@ -8,9 +8,9 @@
         "lint": "turbo run lint",
         "format": "prettier --write \"**/*.{cjs,mjs,js,jsx,ts,tsx,md,mdx}\"",
         "deps": "npx --yes npm-check-updates -x typescript --deep --interactive",
-        "changeset": "changeset",
+        "release": "turbo run build && changeset publish",
         "version-packages": "changeset version",
-        "release": "turbo run build && changeset publish"
+        "changeset": "changeset"
     },
     "devDependencies": {
         "@changesets/cli": "^2.26.2",
